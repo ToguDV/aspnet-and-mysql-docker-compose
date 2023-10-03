@@ -1,19 +1,19 @@
 version: '3.1'
 services:
   mysql:
-    image: mysql:latest
+    image: mysql:8.0
     container_name: my-mysql
     ports:
-      - "3306:3306"
+      - "3307:3306"
     environment:
       MYSQL_ROOT_PASSWORD: mypassword
       MYSQL_DATABASE: mydb
       MYSQL_USER: myuser
       MYSQL_PASSWORD: mypassword
     volumes:
-      - ./mysql-data:/var/lib/mysql
+      - ./mysql-data2:/var/lib/mysql
 
-# Comenta o elimina el siguiente bloque hasta que tu aplicación ASP.NET Core esté lista.
+# Comment until your ASP.NET CORE are ready
 #  app:
 #    image: mcr.microsoft.com/dotnet/aspnet:5.0
 #    container_name: aspnet-app
